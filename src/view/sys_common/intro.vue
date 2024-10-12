@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { MyVideo } from "@/com";
+import { MyVideo } from "@/component";
 const state = reactive({
   src: {
     src: "/stream/live/pi.m3u8",

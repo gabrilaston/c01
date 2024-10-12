@@ -17,18 +17,19 @@
             sysMode.filter((nav) => nav.id == Suser.plantMode)[0].tit
           }}</span>
         </el-menu-item>
-        <!-- <el-menu-item
-          v-if="Suser.plantMode == 1 && Suser.level > 1"
-          index="/ying_long"
-        >
-          <font-awesome-icon
-            :icon="['fab', 'd-and-d']"
-            class="ml-1 mr-2 text-base"
-          />
-          <span class="text-base">应龙·甲辰</span>
-        </el-menu-item> -->
+
         <template v-for="item in menuList()">
-          <el-sub-menu :index="item.path">
+          <el-menu-item
+            :index="item.path"
+            v-if="item.meta.isSingle"
+          >
+            <el-icon><component :is="item.meta.icon" /></el-icon>
+            <span class="text-base">{{ item.meta.title }}</span>
+          </el-menu-item>
+          <el-sub-menu
+            :index="item.path"
+            v-else
+          >
             <!-- 一级菜单 -->
             <template #title>
               <el-icon><component :is="item.meta.icon" /></el-icon>

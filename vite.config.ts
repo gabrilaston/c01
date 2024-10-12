@@ -4,11 +4,12 @@ import AutoImport from 'unplugin-auto-import/vite'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { fileURLToPath, URL } from 'url'
 import { VitePWA } from 'vite-plugin-pwa'
+import cesium from 'vite-plugin-cesium';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
-  plugins: [vue(), visualizer({ open: true }),
+  plugins: [vue(), cesium(), visualizer({ open: true }),
   AutoImport({
     imports: ['vue', 'vue-router', 'pinia', {
       'axios': [

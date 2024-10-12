@@ -34,7 +34,7 @@ export async function login(params: Logintype): Promise<boolean> {
       addDynRoute(useStateStore().role);
       // useUserStore().loong = new YingLong(useUserStore().token)
       router.push({
-        name: "document",
+        name: "home",
       });
       return true;
     } else {

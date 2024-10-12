@@ -52,14 +52,14 @@ onMounted(() => {
 .Production {
   background: linear-gradient(135deg, $plant_basic_light, $plant_basic_dark);
 }
-.Strategy {
+.Research {
   background: linear-gradient(
     135deg,
     $plant_strategy_light,
     $plant_strategy_dark
   );
 }
-.Research {
+.Strategy {
   background: linear-gradient(135deg, $plant_data_light, $plant_data_dark);
 }
 </style>

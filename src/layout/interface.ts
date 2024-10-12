@@ -7,12 +7,13 @@ export const sysMode = [
   },
   {
     id: 1,
-    tit: "战略模式",
-    class: "Strategy",
-  },
-  {
-    id: 2,
     tit: "科研模式",
     class: "Research",
   },
+  {
+    id: 2,
+    tit: "战略模式",
+    class: "Strategy",
+  },
+
 ];
