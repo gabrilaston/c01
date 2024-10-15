@@ -52,7 +52,7 @@ export default defineConfig({
     }
   },
   define: {
-    'process.env': {}
+    'process': process
   },
   build: {
     chunkSizeWarningLimit: 2000,
@@ -76,7 +76,6 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/stream/, '')
       },
-
     }
   },
 })
